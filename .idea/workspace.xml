@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/BaseClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/GetReadToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenUrlBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/JsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/helpers/PropertiesHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/authCreds.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
