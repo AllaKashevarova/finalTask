@@ -2,24 +2,23 @@ package com.coherent.token;
 
 public class WriteTokenManager {
     private static WriteTokenManager instance;
-    private String writeToken;
+    private static String writeTokenValue;
 
-    private WriteTokenManager() {
+    private WriteTokenManager(String writeTokenValue) {
+        this.writeTokenValue = writeTokenValue;
     }
 
     public static WriteTokenManager getInstance() {
         if (instance == null) {
-            instance = new WriteTokenManager();
+            WriteTokenReceiver writeTokenReceiver = new WriteTokenReceiver();
+            writeTokenValue = writeTokenReceiver.getWriteToken();
+
+            instance = new WriteTokenManager(writeTokenValue);
         }
         return instance;
     }
 
-    public void setWriteToken(String token) {
-        this.writeToken = token;
-
-    }
-
     public String getWriteToken(){
-        return writeToken;
+        return writeTokenValue;
     }
 }

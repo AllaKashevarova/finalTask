@@ -1,6 +1,9 @@
 package com.coherent.token;
 
+import com.coherent.HttpClientFactory;
 import com.coherent.HttpRequestManager;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -10,15 +13,15 @@ import java.io.IOException;
 import java.net.URI;
 
 public class WriteTokenReceiver {
-    private CloseableHttpClient httpClient;
+
     private String writeScope = "write";
 
-    public WriteTokenReceiver(CloseableHttpClient httpClient) {
-        this.httpClient = httpClient;
+    public WriteTokenReceiver() {
     }
 
     public String getWriteToken() {
-        URI uri = TokenUrlBuilder.buildTokenUri(writeScope);
+        CloseableHttpClient client = new HttpClientFactory().createClient();
+        URI uri = HttpClientFactory.buildTokenUri(writeScope);
 
         HttpRequestManager httpRequestManager = new HttpRequestManager();
         HttpPost httpPost = httpRequestManager.setHttpPost(uri);
@@ -26,17 +29,20 @@ public class WriteTokenReceiver {
         CloseableHttpResponse response = null;
 
         try {
-            response = httpClient.execute(httpPost);
+            response = client.execute(httpPost);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        String responseBody = null;
+        String parsedWriteToken = null;
         try {
-            responseBody = EntityUtils.toString(response.getEntity());
+            String responseBody = EntityUtils.toString(response.getEntity());
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode jsonNode = objectMapper.readTree(responseBody);
+            parsedWriteToken = jsonNode.get("access_token").asText();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return responseBody;
+        return parsedWriteToken;
 
     }
 

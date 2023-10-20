@@ -2,24 +2,25 @@ package com.coherent.token;
 
 public class ReadTokenManager {
     private static ReadTokenManager instance;
-    private String readToken;
+    private static String readTokenValue;
 
-    private ReadTokenManager() {
+    private ReadTokenManager(String readTokenValue) {
+        this.readTokenValue = readTokenValue;
     }
+
 
     public static ReadTokenManager getInstance() {
         if (instance == null) {
-            instance = new ReadTokenManager();
+            ReadTokenReceiver readTokenReceiver = new ReadTokenReceiver();
+            readTokenValue = readTokenReceiver.getReadToken();
+
+            instance = new ReadTokenManager(readTokenValue);
         }
         return instance;
     }
 
-    public void setReadToken(String token) {
-        this.readToken = token;
-    }
-
     public String getReadToken(){
-        return readToken;
+        return readTokenValue;
     }
 
 }
