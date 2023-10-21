@@ -1,5 +1,6 @@
 package com.coherent;
 
+import helpers.PropertiesHelper;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
@@ -15,14 +16,19 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class HttpClientFactory {
+    PropertiesHelper propertiesHelper = new PropertiesHelper();
+    private String authCredsPropFile = "authCreds.properties";
+    private String hostName = propertiesHelper.propertiesReader("host", authCredsPropFile);
+    private int portName = Integer.parseInt(propertiesHelper.propertiesReader("port", authCredsPropFile));
+    private String userName = propertiesHelper.propertiesReader("user.name", authCredsPropFile);
+    private String password = propertiesHelper.propertiesReader("password", authCredsPropFile);
 
     public CloseableHttpClient createClient() {
         CredentialsProvider credsProvider = new BasicCredentialsProvider();
 
         credsProvider.setCredentials(
-                new AuthScope("localhost", 8050),
-                //TODO get creds from authCreds.properties
-                new UsernamePasswordCredentials("0oa157tvtugfFXEhU4x7", "X7eBCXqlFC7x-mjxG5H91IRv_Bqe1oq7ZwXNA8aq")
+                new AuthScope(hostName, portName),
+                new UsernamePasswordCredentials(userName, password)
         );
 
         return HttpClients.custom()

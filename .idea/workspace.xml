@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/questions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/BaseClass.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadToken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenUrlBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/JsonParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/authCreds.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/authCreds.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/PropertiesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helpers/PropertiesHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +29,19 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4f09d1b1-18de-4e64-970d-a75f2ab0d3ae" />
+        <option name="url" value="https://github.com/AllaKashevarova/API_training.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

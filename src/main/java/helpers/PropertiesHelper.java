@@ -9,12 +9,7 @@ public class PropertiesHelper {
         Properties properties = new Properties();
         InputStream inputStream;
 
-        File file = new File("src/main/resources/authCreds.properties" + propFileName);
-        try {
-            inputStream = new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+        inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 
         if (inputStream != null) {
             try {
