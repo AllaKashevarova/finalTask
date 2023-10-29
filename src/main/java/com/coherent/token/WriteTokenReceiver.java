@@ -13,37 +13,16 @@ import java.io.IOException;
 import java.net.URI;
 
 public class WriteTokenReceiver {
-
     private String writeScope = "write";
 
     public WriteTokenReceiver() {
     }
 
     public String getWriteToken() {
-        CloseableHttpClient client = new HttpClientFactory().createClient();
-        URI uri = HttpClientFactory.buildTokenUri(writeScope);
+        TokenExtractor tokenExtractor = new TokenExtractor();
+        String writeToken = tokenExtractor.getToken(writeScope);
 
-        HttpRequestManager httpRequestManager = new HttpRequestManager();
-        HttpPost httpPost = httpRequestManager.setHttpPost(uri);
-
-        CloseableHttpResponse response = null;
-
-        try {
-            response = client.execute(httpPost);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        String parsedWriteToken = null;
-        try {
-            String responseBody = EntityUtils.toString(response.getEntity());
-            ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode jsonNode = objectMapper.readTree(responseBody);
-            parsedWriteToken = jsonNode.get("access_token").asText();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        return parsedWriteToken;
-
+        return writeToken;
     }
 
 }
