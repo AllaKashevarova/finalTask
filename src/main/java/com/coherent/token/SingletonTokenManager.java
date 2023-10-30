@@ -9,11 +9,11 @@ public class SingletonTokenManager {
         WriteTokenReceiver writeTokenReceiver = new WriteTokenReceiver();
         ReadTokenReceiver readTokenReceiver = new ReadTokenReceiver();
 
-        this.readTokenValue = readTokenReceiver.getReadToken();
-        this.writeTokenValue = writeTokenReceiver.getWriteToken();
+        readTokenValue = readTokenReceiver.getReadToken();
+        writeTokenValue = writeTokenReceiver.getWriteToken();
     }
 
-    public static SingletonTokenManager getInstance(String tokenType) {
+    public static SingletonTokenManager getInstance() {
 
         if (instance == null) {
             instance = new SingletonTokenManager();
@@ -21,12 +21,11 @@ public class SingletonTokenManager {
         return instance;
     }
 
-
-    public String getReadToken() {
+    public static String getReadToken() {
         return readTokenValue;
     }
 
-    public String getWriteTokenValue() {
+    public static String getWriteToken() {
         return writeTokenValue;
     }
 
