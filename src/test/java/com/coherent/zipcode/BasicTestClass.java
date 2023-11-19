@@ -1,34 +1,31 @@
 package com.coherent.zipcode;
 
-import com.coherent.HttpClientFactory;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.io.IOException;
+
 public abstract class BasicTestClass {
-
-
+    protected CloseableHttpClient httpClient;
+    protected CloseableHttpResponse response;
 
     @BeforeEach
-    public void beforeEach(String scope) {
-        //Can I use switch case in abstract class? Or I should create a super class and override methods?
-        CloseableHttpClient client = null;
-        switch (scope) {
-            case "WRITE":
-                client = new HttpClientFactory().createClient(true);
-                break;
-            case "READ":
-                client = new HttpClientFactory().createClient(false);
+    public void beforeEach() {
+        httpClient = createHttpClient();
+    }
+
+    @AfterEach
+    public void afterAll(){
+        try {
+            response.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
     }
-
-    @AfterAll
-    public void afterAll(){
-
-
-    }
-
+    protected abstract CloseableHttpClient createHttpClient();
 
 }

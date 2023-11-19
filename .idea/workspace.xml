@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/URIManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/zipCodeController.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodeGET.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodePOST.java" afterDir="false" />
+    <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/OAuthHttpClientFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/url.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/URIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/URIManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/ReadTokenReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/WriteTokenReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/authCreds.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/authCreds.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodeGET.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodeGET.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodePOST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodePOST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +41,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -51,13 +52,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="2SzOhfe8MnAQCFroQIZT3GNUIvN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,22 +63,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.ZipCodeGET">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="API_training" />
@@ -95,8 +90,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZipCodeGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.ZipCodeGET" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ZipCodeGET" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -146,5 +158,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
     <option name="LAST_COMMIT_MESSAGE" value="Test" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodeGET.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

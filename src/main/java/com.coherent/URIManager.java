@@ -1,23 +1,29 @@
 package com.coherent;
 
+import helpers.PropertiesHelper;
 import org.apache.http.client.utils.URIBuilder;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 
 public class URIManager {
+    private static PropertiesHelper propertiesHelper = new PropertiesHelper();
 
-    public URI buildURI(String path) {
-        //TODO QUESTION: Is it possible to include parameters of the URI into the method but don't use them if they're not needed?
+    public static URI buildURI(String path) {
+        String urlPropFile = "url.properties";
+        String scheme = propertiesHelper.propertiesReader("url.scheme", urlPropFile);
+        String host = propertiesHelper.propertiesReader("url.host", urlPropFile);
 
+        final String URL = "%s://%s%s";
+        String val = String.format(URL, scheme, host, path);
+
+        URI uri = null;
         try {
-            return new URIBuilder()
-                    .setScheme("http")
-                    .setHost("localhost:8050")
-                    .setPath(path)
-                    .build();
+            uri = new URI(val);
         } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
+        return uri;
+            // http://localhost:8050/zip-codes
     }
 }
