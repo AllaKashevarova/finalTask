@@ -27,8 +27,6 @@ public class OAuthHttpClientFactory {
     private String password = propertiesHelper.propertiesReader("password", authCredsPropFile);
 
     public CloseableHttpClient createClient() {
-        //TODO Leave oath token logic separately. Add another separate class with configuration
-        //TODO and logic for Get and POST, and others: create there client with TOKEN and URl logic
         CredentialsProvider credsProvider = new BasicCredentialsProvider();
 
         credsProvider.setCredentials(

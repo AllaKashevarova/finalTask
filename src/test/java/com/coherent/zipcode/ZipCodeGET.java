@@ -27,25 +27,16 @@ public class ZipCodeGET extends BasicTestClass{
     private String authCredsPropFile = "authCreds.properties";
     private String scopeRead = propertiesHelper.propertiesReader("scope.read", authCredsPropFile);
 
-    //final String singletonRead = SingletonTokenManager.getReadToken();
-
-    @Override
-    protected CloseableHttpClient createHttpClient() {
-        HttpClientFactory httpClientFactory = new HttpClientFactory();
-        CloseableHttpClient client = httpClientFactory.createClient(scopeRead);
-        return client;
-    }
     @Test
     public void shouldGetZipCodeWithGET(){
-        CloseableHttpClient client = createHttpClient();
+
         HttpGet httpGet = zipCodeController.getZipCodes();
-        //httpGet.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + singletonRead);
 
         CloseableHttpResponse response = null;
         try {
-            response = client.execute(httpGet);
+            response = httpClient.execute(httpGet);
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
         final int statusCode = response.getStatusLine().getStatusCode();
