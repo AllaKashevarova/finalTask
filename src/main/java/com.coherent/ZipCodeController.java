@@ -1,46 +1,48 @@
 package com.coherent;
 
-import com.coherent.token.SingletonTokenManager;
-import com.google.common.collect.Lists;
 import helpers.PropertiesHelper;
-import org.apache.http.Header;
-import org.apache.http.HttpHeaders;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.message.BasicHeader;
+import org.apache.http.util.EntityUtils;
 
-import java.util.List;
+import java.io.IOException;
 
 public class ZipCodeController {
     private HttpRequestManager httpRequestManager = new HttpRequestManager();
     private PropertiesHelper propertiesHelper = new PropertiesHelper();
     private String urlPropFile = "url.properties";
-    private String path = propertiesHelper.propertiesReader("zip.get.path", urlPropFile);
+    private String zipControllerFile = "zipCodeController.properties";
+    private String authCredsFile = "authCreds.properties";
+    private String pathGet = propertiesHelper.propertiesReader("zip.get.path", urlPropFile);
+    private String pathPost = propertiesHelper.propertiesReader("zip.post.path", urlPropFile);
+    private String readScope = propertiesHelper.propertiesReader("scope.read", authCredsFile);
+    private String writeScope = propertiesHelper.propertiesReader("scope.write", authCredsFile);
+    private HttpHeaderManager headerManager = new HttpHeaderManager();
+    private HttpClientFactory httpClientFactory = new HttpClientFactory();
 
-    public Header getAuthToken(String scope) {
-        SingletonTokenManager.getInstance();
-        final String singletonWrite = SingletonTokenManager.getWriteToken();
-        final String singletonRead = SingletonTokenManager.getReadToken();
-        final Header writeHeader = new BasicHeader(HttpHeaders.AUTHORIZATION, "Bearer " + singletonWrite);
-        final List<Header> writeHeaders = Lists.newArrayList(writeHeader);
-        final Header readHeader = new BasicHeader(HttpHeaders.AUTHORIZATION, "Bearer " + singletonRead);
-        final List<Header> readHeaders = Lists.newArrayList(readHeader);
-
-        switch (scope) {
-            case "WRITE":
-                return writeHeader;
-            case "READ":
-                return readHeader;
-            default:
-                System.out.println("Provide either 'WRITE' or 'READ' token values");
-                return null;
-        }
+    public CloseableHttpResponse getZipCodes() {
+        CloseableHttpClient httpClient = httpClientFactory.createClient();
+        final HttpGet httpGetZip = httpRequestManager.setHttpGet(URIManager.buildURI(pathGet));
+        httpGetZip.setHeader(headerManager.getAuthToken(readScope));
+        CloseableHttpResponse response = ResponseManager.getResponse(httpGetZip, httpClient);
+        return response;
     }
 
-    public HttpGet getZipCodes() {
-        final HttpGet httpGetZip = httpRequestManager.setHttpGet(URIManager.buildURI(path));
-        httpGetZip.setHeader(getAuthToken("READ"));
-        return httpGetZip;
+    public CloseableHttpResponse postZipCodes(String body){
+        CloseableHttpClient httpClient = httpClientFactory.createClient();
+        //TODO create Client here AND think about separate method with the client
+        final HttpPost httpPostZip = httpRequestManager.setHttpPostWithJson(URIManager.buildURI(pathPost), body);
+        httpPostZip.setHeader(headerManager.getAuthToken(writeScope));
+        CloseableHttpResponse response = ResponseManager.getResponse(httpPostZip, httpClient);
+
+        return response;
     }
+
+
+
+
+
 
 }

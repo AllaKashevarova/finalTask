@@ -1,10 +1,11 @@
-package com.coherent.zipcode;
+package com.coherent.zipcode.zipCodeController;
 
 import com.coherent.HttpClientFactory;
 import com.coherent.HttpRequestManager;
 import com.coherent.URIManager;
 import com.coherent.ZipCodeController;
 import com.coherent.token.SingletonTokenManager;
+import com.coherent.zipcode.BasicTestClass;
 import helpers.PropertiesHelper;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpStatus;
@@ -17,37 +18,36 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
-public class ZipCodeGET extends BasicTestClass{
-    //TODO create a separate class with methods for configuration HTTP methods
+public class ZipCodeGET extends BasicTestClass {
     private PropertiesHelper propertiesHelper = new PropertiesHelper();
     private ZipCodeController zipCodeController = new ZipCodeController();
     private String authCredsPropFile = "authCreds.properties";
     private String scopeRead = propertiesHelper.propertiesReader("scope.read", authCredsPropFile);
+    private static final Logger logger = LoggerFactory.getLogger(ZipCodeGET.class);
 
     @Test
-    public void shouldGetZipCodeWithGET(){
+    public void shouldGetZipCodeWithGET() {
+        ZipCodeController controller = new ZipCodeController();
+        CloseableHttpResponse getZipCodesResponse = controller.getZipCodes();
+        final int actualStatusCode = getZipCodesResponse.getStatusLine().getStatusCode();
 
-        HttpGet httpGet = zipCodeController.getZipCodes();
-
-        CloseableHttpResponse response = null;
         try {
-            response = httpClient.execute(httpGet);
+            String responseBody = EntityUtils.toString(getZipCodesResponse.getEntity());
+            logger.info("Response body: {}", responseBody);
+            logger.info("Status code: {}", getZipCodesResponse.getStatusLine());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        final int statusCode = response.getStatusLine().getStatusCode();
-
-        try {
-            String responseBody = EntityUtils.toString(response.getEntity());
-            System.out.println("Response body: " + responseBody);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        Assertions.assertEquals(HttpStatus.SC_OK, statusCode);
+        Assertions.assertEquals(HttpStatus.SC_OK, actualStatusCode);
+        //BUGS:
+        //Scenario 1:
+        //Actual Result: 201 Status
+        //Expected Result: 200 Status code
     }
 }
