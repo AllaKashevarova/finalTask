@@ -1,10 +1,6 @@
 package com.coherent.token;
 
-import com.coherent.token.SingletonTokenManager;
-import com.google.common.collect.Lists;
-import helpers.PropertiesHelper;
-import org.apache.http.Header;
-import org.apache.http.HttpHeaders;
+import utils.PropertiesHelper;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
@@ -12,11 +8,9 @@ import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.message.BasicHeader;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.List;
 
 public class OAuthHttpClientFactory {
     private PropertiesHelper propertiesHelper = new PropertiesHelper();

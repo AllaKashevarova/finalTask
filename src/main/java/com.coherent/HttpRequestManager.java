@@ -3,11 +3,19 @@ package com.coherent;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.util.List;
 
 public class HttpRequestManager {
+
+    public static CloseableHttpClient createClient() {
+        CloseableHttpClient client = HttpClients.createDefault();
+        return client;
+    }
 
     public HttpPost setHttpPost(URI uri){
         HttpPost httpPost = new HttpPost(uri);

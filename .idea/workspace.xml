@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpHeaderManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ResponseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml " afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/LoggerHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpHeaderManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ResponseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ResponseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/URIManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/zipCodeController.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/zipCodeController.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/OAuthHttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/OAuthHttpClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/PropertiesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PropertiesHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodeGET.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/ZipCodePOST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +55,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2SzOhfe8MnAQCFroQIZT3GNUIvN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -63,13 +66,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -79,7 +82,7 @@
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ZipCodePOST">
+  <component name="RunManager" selected="JUnit.ZipCodePOST.shouldCreateZipCodeWithPOST">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="API_training" />
@@ -123,11 +126,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZipCodePOST.shouldCreateZipCodeWithPOST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.ZipCodePOST" />
+      <option name="METHOD_NAME" value="shouldCreateZipCodeWithPOST" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zipCodeController in API_training" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ZipCodePOST.shouldCreateZipCodeWithPOST" />
         <item itemvalue="JUnit.ZipCodePOST" />
         <item itemvalue="JUnit.ZipCodeGET" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.zipCodeController in API_training" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -182,9 +210,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com.coherent/HttpHeaderManager.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
