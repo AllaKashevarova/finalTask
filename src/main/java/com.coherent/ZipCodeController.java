@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import org.springframework.util.StreamUtils;
 import utils.PropertiesHelper;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -28,10 +27,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ZipCodeController {
+
+    public ZipCodeController() {
+        SingletonTokenManager.getInstance();
+    }
+
     private HttpRequestManager httpRequestManager = new HttpRequestManager();
     private static PropertiesHelper propertiesHelper = new PropertiesHelper();
     private static String urlPropFile = "url.properties";
-    private String zipControllerFile = "zipCodeController.properties";
     private String authCredsFile = "authCreds.properties";
     private String pathPost = propertiesHelper.propertiesReader("zip.post.path", urlPropFile);
     private String readScope = propertiesHelper.propertiesReader("scope.read", authCredsFile);
@@ -54,60 +57,37 @@ public class ZipCodeController {
         return uri;
         // http://localhost:8050/zip-codes
     }
+
     @SneakyThrows
     public List<String> sendGetZipCodes(int statusCode) {
-        SingletonTokenManager.getInstance();
         CloseableHttpResponse response = httpRequestManager.sendGet(buildURI(pathGet), SingletonTokenManager.getReadToken());
         //QUESTION: when I use this log method then I get "Can't read from closed stream" message.
         // How can I re-write logger method? :
         //getResponseLogs(response);
 
-        String responseBody = StreamUtils.copyToString(response.getEntity().getContent(), Charset.defaultCharset());
-
+        InputStream inputStream = response.getEntity().getContent();
+        String responseBody = readInputStream(inputStream);
         ObjectMapper objectMapper = new ObjectMapper();
-        List<String> entity = new ArrayList<>();
-        entity = objectMapper.readValue(responseBody, List.class);
+        List<String> entity = objectMapper.readValue(responseBody, List.class);
 
         return entity;
     }
-
     @SneakyThrows
-    public static List<String> getListZipFromBody(CloseableHttpResponse response, int statusCode) {
-        List<String> responseBody = new ArrayList<>();
-        HttpEntity entity = response.getEntity();
-
-        if (entity != null) {
-            try (InputStream inputStream = entity.getContent();
-                 BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
-
-                StringBuilder responseStringBuilder = new StringBuilder();
-                String line;
-
-                while ((line = reader.readLine()) != null) {
-                    responseStringBuilder.append(line);
-                }
-
-                // Use Jackson to parse the JSON string into a List<String>
-                ObjectMapper objectMapper = new ObjectMapper();
-                List<String> jsonList = objectMapper.readValue(responseStringBuilder.toString(), List.class);
-                responseBody.addAll(jsonList);
-            } finally {
-                EntityUtils.consume(entity); // Ensure proper resource release
+    private String readInputStream(InputStream inputStream) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, Charset.defaultCharset()))) {
+            StringBuilder result = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                result.append(line);
             }
+            return result.toString();
         }
-
-         Assertions.assertEquals(statusCode, response.getStatusLine().getStatusCode());
-        return responseBody;
-
     }
 
-
     public CloseableHttpResponse sendPostZipCodes(List<String> body, int statusCode) {
-        SingletonTokenManager.getInstance();
         CloseableHttpResponse response = httpRequestManager.sendPost(buildURI(pathPost), SingletonTokenManager.getWriteToken(), body);
         //getResponseLogs(response);
         return response;
-
     }
 
     @SneakyThrows

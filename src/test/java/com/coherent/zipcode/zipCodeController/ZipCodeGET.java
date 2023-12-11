@@ -9,7 +9,7 @@ import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.util.Assert;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,13 +24,14 @@ public class ZipCodeGET extends BasicTestClass {
     public void shouldGetZipCodeWithGET() {
         List<String> expectedZipCodes = new ArrayList<>(Arrays.asList("12345" ,"23456", "ABCDE"));
         List<String> zipCodesResponse = zipCodeController.sendGetZipCodes(201);
-        Assertions.assertTrue(zipCodesResponse.containsAll(expectedZipCodes));
+
+        org.assertj.core.api.Assertions.assertThat(zipCodesResponse).containsAll(expectedZipCodes);
         //QUESTION: why checking size is a valid assertion here?
 //        Set<String> set = Sets.newHashSet(zipCodesResponse);
 //        Assertions.assertEquals(zipCodesResponse.size(), set.size());
 
         //QUESTION: we don't verify status code here. If we verify the status on the getListZipFromBody()
-        //method level then it doesn't excecute the test
+        //method level then it doesn't execute the test
 
         //BUGS:
         //Scenario 1:

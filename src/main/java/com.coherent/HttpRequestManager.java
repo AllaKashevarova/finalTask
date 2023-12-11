@@ -18,12 +18,11 @@ import java.net.URI;
 import java.util.List;
 
 public class HttpRequestManager {
-    private static PropertiesHelper propertiesHelper = new PropertiesHelper();
+    private static final PropertiesHelper propertiesHelper = new PropertiesHelper();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     public static CloseableHttpClient createClient() {
-        CloseableHttpClient client = HttpClients.createDefault();
-        return client;
+        return HttpClients.createDefault();
     }
 
     @SneakyThrows(IOException.class)
