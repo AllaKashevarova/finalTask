@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/LoggerHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpClientFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpHeaderManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ResponseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ResponseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/URIManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ResponseManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/OAuthHttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/OAuthHttpClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helpers/PropertiesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PropertiesHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/url.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/url.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" afterDir="false" />
@@ -68,6 +63,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;Task__20&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
@@ -82,20 +78,7 @@
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ZipCodePOST.shouldCreateZipCodeWithPOST">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ZipCodeGET">
     <configuration name="ZipCodeGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
@@ -107,6 +90,22 @@
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
       <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.ZipCodeGET" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZipCodeGET.shouldGetZipCodeWithGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.ZipCodeGET" />
+      <option name="METHOD_NAME" value="shouldGetZipCodeWithGET" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ZipCodePOST.shouldCreateZipCodeWithPOST" />
-        <item itemvalue="JUnit.ZipCodePOST" />
         <item itemvalue="JUnit.ZipCodeGET" />
+        <item itemvalue="JUnit.ZipCodePOST" />
+        <item itemvalue="JUnit.ZipCodePOST.shouldCreateZipCodeWithPOST" />
+        <item itemvalue="JUnit.ZipCodeGET.shouldGetZipCodeWithGET" />
         <item itemvalue="JUnit.zipCodeController in API_training" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +179,11 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -199,6 +203,11 @@
             </State>
           </value>
         </entry>
+        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d">
+          <value>
+            <State />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
@@ -211,10 +220,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="2" />
+          <line>25</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="expectedZipCodes.get(2)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

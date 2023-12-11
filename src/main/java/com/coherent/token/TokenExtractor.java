@@ -17,8 +17,7 @@ public class TokenExtractor {
         CloseableHttpClient client = new OAuthHttpClientFactory().createClient();
         URI uri = OAuthHttpClientFactory.buildTokenUri(scope);
 
-        HttpRequestManager httpRequestManager = new HttpRequestManager();
-        HttpPost httpPost = httpRequestManager.setHttpPost(uri);
+        HttpPost httpPost = new HttpPost(uri);
         CloseableHttpResponse response = null;
 
         try {
