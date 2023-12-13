@@ -21,13 +21,9 @@ public class HttpRequestManager {
     private static final PropertiesHelper propertiesHelper = new PropertiesHelper();
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    public static CloseableHttpClient createClient() {
-        return HttpClients.createDefault();
-    }
-
     @SneakyThrows(IOException.class)
     public CloseableHttpResponse sendPost(URI uri, String bearerToken, List<String> postBody){
-        CloseableHttpClient client = createClient();
+        CloseableHttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(uri);
 
         String jsonBody = objectMapper.writeValueAsString(postBody);
@@ -42,7 +38,7 @@ public class HttpRequestManager {
 
     @SneakyThrows(IOException.class)
     public CloseableHttpResponse sendGet(URI uri, String bearerToken) {
-        CloseableHttpClient client = createClient();
+        CloseableHttpClient client = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet(uri);
         httpGet.setHeader(HttpHeaders.AUTHORIZATION,"Bearer " + bearerToken);
         return client.execute(httpGet);

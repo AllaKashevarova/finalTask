@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml " beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml " afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +72,22 @@
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.zipCodeController in API_training">
+  <component name="RunManager" selected="JUnit.ZipCodeGET">
+    <configuration name="ZipCodeGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.ZipCodeGET" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ZipCodeGET.shouldGetZipCodeWithGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
@@ -124,22 +136,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZipCodePOST.shouldCreateZipCodeWithPOST" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.ZipCodePOST" />
-      <option name="METHOD_NAME" value="shouldCreateZipCodeWithPOST" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="zipCodeController in API_training" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <option name="TEST_OBJECT" value="directory" />
@@ -150,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ZipCodeGET" />
         <item itemvalue="JUnit.zipCodeController in API_training" />
         <item itemvalue="JUnit.ZipCodeGET.shouldGetZipCodeWithGET" />
         <item itemvalue="JUnit.ZipCodePOST.shouldCreateNoDuplicatesForAlreadyUsedZipCodes" />
         <item itemvalue="JUnit.ZipCodePOST.shouldCreateNoDuplicatesForAvailableZipCodes" />
-        <item itemvalue="JUnit.ZipCodePOST.shouldCreateZipCodeWithPOST" />
       </list>
     </recent_temporary>
   </component>
@@ -215,15 +211,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="expectedZipCodes.get(2)" />
