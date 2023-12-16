@@ -1,22 +1,19 @@
-package com.coherent;
+package com.coherent.token;
 
-import helpers.PropertiesHelper;
+import utils.PropertiesHelper;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class HttpClientFactory {
-    PropertiesHelper propertiesHelper = new PropertiesHelper();
+public class OAuthHttpClientFactory {
+    private PropertiesHelper propertiesHelper = new PropertiesHelper();
     private String authCredsPropFile = "authCreds.properties";
     private String hostName = propertiesHelper.propertiesReader("host", authCredsPropFile);
     private int portName = Integer.parseInt(propertiesHelper.propertiesReader("port", authCredsPropFile));

@@ -1,6 +1,5 @@
 package com.coherent.token;
 
-import com.coherent.HttpClientFactory;
 import com.coherent.HttpRequestManager;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,11 +14,10 @@ import java.net.URI;
 public class TokenExtractor {
 
     public String getToken(String scope) {
-        CloseableHttpClient client = new HttpClientFactory().createClient();
-        URI uri = HttpClientFactory.buildTokenUri(scope);
+        CloseableHttpClient client = new OAuthHttpClientFactory().createClient();
+        URI uri = OAuthHttpClientFactory.buildTokenUri(scope);
 
-        HttpRequestManager httpRequestManager = new HttpRequestManager();
-        HttpPost httpPost = httpRequestManager.setHttpPost(uri);
+        HttpPost httpPost = new HttpPost(uri);
         CloseableHttpResponse response = null;
 
         try {
