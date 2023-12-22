@@ -1,13 +1,14 @@
 package com.coherent.zipcode;
 
+import com.coherent.UserController;
 import com.coherent.ZipCodeController;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.junit.jupiter.api.AfterEach;
-import utils.LoggerHelper;
 
 public abstract class BasicTestClass {
     protected CloseableHttpClient httpClient;
     protected ZipCodeController zipCodeController = new ZipCodeController();
+    protected UserController userController = new UserController();
 
     @AfterEach
     public void afterAll() {

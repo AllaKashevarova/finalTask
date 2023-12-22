@@ -1,8 +1,11 @@
 package org.example;
 
 
+import com.coherent.User;
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
         //CloseableHttpClient client = new OAuthHttpClientFactory().createClient();
 //        SingletonTokenManager.getInstance();
 //
@@ -25,6 +28,9 @@ public class Main {
 
 //        String singletonWrite = SingletonTokenManager.getWriteToken();
 //        System.out.println(singletonWrite);
+
+
+
 
     }
 }
