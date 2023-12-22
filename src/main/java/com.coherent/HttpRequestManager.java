@@ -10,6 +10,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import utils.PropertiesHelper;
 
 import java.io.IOException;
@@ -18,11 +20,11 @@ import java.net.URI;
 import java.util.List;
 
 public class HttpRequestManager {
-    private static final PropertiesHelper propertiesHelper = new PropertiesHelper();
     private final ObjectMapper objectMapper = new ObjectMapper();
+    private static final Logger logger = LoggerFactory.getLogger(HttpRequestManager.class);
 
     @SneakyThrows(IOException.class)
-    public CloseableHttpResponse sendPost(URI uri, String bearerToken, List<String> postBody){
+    public CloseableHttpResponse sendPost(URI uri, String bearerToken, Object postBody){
         CloseableHttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(uri);
 
@@ -33,6 +35,11 @@ public class HttpRequestManager {
         httpPost.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + bearerToken);
         httpPost.setHeader("Accept", "application/json");
         httpPost.setHeader("Content-type", "application/json");
+
+        logger.info("Sending POST request to URI: {}", uri);
+        logger.info("Request body: {}", jsonBody);
+        logger.info("Authorization token: {}", bearerToken);
+
         return client.execute(httpPost);
     }
 
@@ -41,6 +48,7 @@ public class HttpRequestManager {
         CloseableHttpClient client = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet(uri);
         httpGet.setHeader(HttpHeaders.AUTHORIZATION,"Bearer " + bearerToken);
+        logger.info("Sending GET request to URI: {}", uri);
         return client.execute(httpGet);
     }
 }

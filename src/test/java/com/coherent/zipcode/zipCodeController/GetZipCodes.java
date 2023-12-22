@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class ZipCodeGET extends BasicTestClass {
+public class GetZipCodes extends BasicTestClass {
 
     @Test
     public void shouldGetZipCodeWithGET() {
