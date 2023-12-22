@@ -5,21 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.coherent/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RequestUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUsers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUsers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/payload/createExistingUser.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/payload/createUserRequiredFields.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/payload/createUserZipIncorrect.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LoggerHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/url.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/url.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodeGET.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/GetZipCodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/ZipCodePOST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUsers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Task_20" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,15 +63,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;Task__20&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "Task__30",
+    "last_opened_file_path": "/Users/allakashevarova/Documents/GitHub/API_training/src/main/resources/payload",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/payload" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java" />
@@ -89,37 +84,7 @@
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PostUsers">
-    <configuration name="GetUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetZipCodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.GetZipCodes" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.userController in API_training">
     <configuration name="PostUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
@@ -135,42 +100,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostZipCodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostUsers.shouldCreateUserRequiredFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.PostZipCodes" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.PostUsers" />
+      <option name="METHOD_NAME" value="shouldCreateUserRequiredFields" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.coherent.zipcode.zipCodeController in API_training" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostUsers.shouldFailWhenAddExistingUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.PostUsers" />
+      <option name="METHOD_NAME" value="shouldFailWhenAddExistingUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostUsers.shouldFailWhenZipIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.PostUsers" />
+      <option name="METHOD_NAME" value="shouldFailWhenZipIncorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="userController in API_training" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.userController in API_training" />
+        <item itemvalue="JUnit.PostUsers.shouldFailWhenAddExistingUser" />
+        <item itemvalue="JUnit.PostUsers.shouldCreateUserRequiredFields" />
+        <item itemvalue="JUnit.PostUsers.shouldFailWhenZipIncorrect" />
         <item itemvalue="JUnit.PostUsers" />
-        <item itemvalue="JUnit.GetUsers" />
-        <item itemvalue="JUnit.GetZipCodes" />
-        <item itemvalue="JUnit.PostZipCodes" />
-        <item itemvalue="JUnit.com.coherent.zipcode.zipCodeController in API_training" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +186,11 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -220,11 +217,6 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
@@ -235,7 +227,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com.coherent/User.java</url>
-          <line>26</line>
+          <line>27</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
@@ -248,5 +240,10 @@
         <watch expression="listOfUsers" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/API_training$PostUsers.ic" NAME="PostUsers Coverage Results" MODIFIED="1703264677025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.coherent.zipcode.userController.*</FILTER>
+    </SUITE>
   </component>
 </project>
