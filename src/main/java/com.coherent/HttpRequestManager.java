@@ -3,10 +3,12 @@ package com.coherent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.apache.http.HttpHeaders;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -45,6 +47,7 @@ public class HttpRequestManager {
 
     @SneakyThrows(IOException.class)
     public CloseableHttpResponse sendGet(URI uri, String bearerToken) {
+
         CloseableHttpClient client = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet(uri);
         httpGet.setHeader(HttpHeaders.AUTHORIZATION,"Bearer " + bearerToken);
