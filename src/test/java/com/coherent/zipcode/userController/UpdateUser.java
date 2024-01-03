@@ -5,6 +5,7 @@ import com.coherent.user.User;
 import com.coherent.zipcode.BasicTestClass;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -28,15 +29,57 @@ public class UpdateUser extends BasicTestClass {
 
         PatchRequestBody patchRequestBody = new PatchRequestBody(userNewValues, userToChange);
 
-        //TODO: delete when successful
-        String requestBody = objectMapper.writeValueAsString(patchRequestBody);
-        System.out.println("Patch request body: " + requestBody);
-
         userController.sendPatchUsers(patchRequestBody);
 
         List<User> listOfUsers = userController.sendGetUsers();
-        System.out.println("User in the list: " + listOfUsers.contains(userToChange));
+        System.out.println("Updated User is on the server: " + listOfUsers.contains(userToChange));
 
         org.assertj.core.api.Assertions.assertThat(listOfUsers).contains(userNewValues);
+    }
+
+    @DisplayName("Scenario 2 - User is not updated if Zip is incorrect")
+    @Test
+    public void shouldNotUpdateUserIfInvalidZip() throws IOException {
+        String jsonUser1 = "src/main/resources/payload/createUserAllFields.json";
+        User userToChange = new ObjectMapper().readValue(new File(jsonUser1), User.class);
+
+        String jsonUser2 = "src/main/resources/updateUser/userWrongZip.json";
+        User userNewValues = new ObjectMapper().readValue(new File(jsonUser2), User.class);
+
+        userController.sendPostUsers(userToChange);
+
+        PatchRequestBody patchRequestBody = new PatchRequestBody(userNewValues, userToChange);
+
+        int actualStatusCode = userController.sendPatchUsers(patchRequestBody);
+        int expectedStatusCode = 424;
+
+        List<User> listOfUsers = userController.sendGetUsers();
+        System.out.println("Updated User is on the server: " + listOfUsers.contains(userToChange));
+
+        Assertions.assertThat(actualStatusCode).isEqualTo(expectedStatusCode);
+        org.assertj.core.api.Assertions.assertThat(listOfUsers).doesNotContain(userNewValues);
+    }
+
+    @DisplayName("Scenario 3 - User is not updated if Required fields are missed")
+    @Test
+    public void shouldNotUpdateUserIfRequiredFieldsMissed() throws IOException {
+        String jsonUser1 = "src/main/resources/payload/createUserAllFields.json";
+        User userToChange = new ObjectMapper().readValue(new File(jsonUser1), User.class);
+
+        String jsonUser2 = "src/main/resources/updateUser/userRequiredFieldsMissed.json";
+        User userNewValues = new ObjectMapper().readValue(new File(jsonUser2), User.class);
+
+        userController.sendPostUsers(userToChange);
+
+        PatchRequestBody patchRequestBody = new PatchRequestBody(userNewValues, userToChange);
+
+        int actualStatusCode = userController.sendPatchUsers(patchRequestBody);
+        int expectedStatusCode = 409;
+
+        List<User> listOfUsers = userController.sendGetUsers();
+        System.out.println("Updated User is on the server: " + listOfUsers.contains(userToChange));
+
+        Assertions.assertThat(actualStatusCode).isEqualTo(expectedStatusCode);
+        org.assertj.core.api.Assertions.assertThat(listOfUsers).doesNotContain(userNewValues);
     }
 }

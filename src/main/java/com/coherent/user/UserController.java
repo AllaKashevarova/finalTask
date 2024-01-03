@@ -79,7 +79,6 @@ public class UserController {
                         body)) {
 
             Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(201);
-            ObjectMapper objectMapper = new ObjectMapper();
             String responseBody = EntityUtils.toString(response.getEntity());
             logger.info("Response -> " + responseBody);
             logger.info("Response StatusCode -> " + response.getStatusLine().getStatusCode());
@@ -87,7 +86,7 @@ public class UserController {
     }
 
     @SneakyThrows
-    public void sendPatchUsers(PatchRequestBody patchRequestBody){
+    public int sendPatchUsers(PatchRequestBody patchRequestBody){
         try (
                 CloseableHttpResponse response = httpRequestManager.sendPatch(RequestUtils.buildURI(
                                 "users.path"),
@@ -95,13 +94,11 @@ public class UserController {
                         patchRequestBody)) {
 
             //Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(200);
-            ObjectMapper objectMapper = new ObjectMapper();
             String responseBody = EntityUtils.toString(response.getEntity());
             logger.info("PATCH Response -> " + responseBody);
             logger.info("PATCH Response StatusCode -> " + response.getStatusLine().getStatusCode());
             logger.info("PATCH Response StatusLine -> " + response.getStatusLine());
+            return response.getStatusLine().getStatusCode();
         }
-
     }
-
 }
