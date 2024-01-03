@@ -1,4 +1,4 @@
-package com.coherent;
+package com.coherent.zipcode;
 
 import com.coherent.token.SingletonTokenManager;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,9 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.apache.http.client.methods.CloseableHttpResponse;
+import utils.HttpRequestManager;
 import utils.RequestUtils;
 
-import java.io.IOException;
 import java.util.List;
 
 public class ZipCodeController {

@@ -1,7 +1,8 @@
 package org.example;
 
 
-import com.coherent.User;
+import com.coherent.user.PatchRequestBody;
+import com.coherent.user.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class Main {
@@ -28,8 +29,6 @@ public class Main {
 
 //        String singletonWrite = SingletonTokenManager.getWriteToken();
 //        System.out.println(singletonWrite);
-
-
 
 
     }

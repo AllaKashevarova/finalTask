@@ -1,26 +1,20 @@
-package com.coherent;
+package com.coherent.user;
 
+import utils.HttpRequestManager;
 import com.coherent.token.SingletonTokenManager;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.assertj.core.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.RequestUtils;
 
-import java.io.IOException;
 import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class UserController {
@@ -90,6 +84,24 @@ public class UserController {
             logger.info("Response -> " + responseBody);
             logger.info("Response StatusCode -> " + response.getStatusLine().getStatusCode());
         }
+    }
+
+    @SneakyThrows
+    public void sendPatchUsers(PatchRequestBody patchRequestBody){
+        try (
+                CloseableHttpResponse response = httpRequestManager.sendPatch(RequestUtils.buildURI(
+                                "users.path"),
+                        SingletonTokenManager.getWriteToken(),
+                        patchRequestBody)) {
+
+            //Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(200);
+            ObjectMapper objectMapper = new ObjectMapper();
+            String responseBody = EntityUtils.toString(response.getEntity());
+            logger.info("PATCH Response -> " + responseBody);
+            logger.info("PATCH Response StatusCode -> " + response.getStatusLine().getStatusCode());
+            logger.info("PATCH Response StatusLine -> " + response.getStatusLine());
+        }
+
     }
 
 }

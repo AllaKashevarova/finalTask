@@ -1,22 +1,18 @@
 package com.coherent.zipcode.userController;
 
-import com.coherent.User;
+import com.coherent.user.User;
 import com.coherent.zipcode.BasicTestClass;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.assertj.core.api.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class PostUsers extends BasicTestClass {
+public class PostUser extends BasicTestClass {
 
     @DisplayName("Scenario 1 - check user is added and zip code is removed")
     @Test

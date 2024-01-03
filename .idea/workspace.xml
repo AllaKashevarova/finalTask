@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/PatchRequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userNewValues.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HttpRequestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/ZipCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/zipcode/ZipCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/token/TokenExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,17 +78,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Task__40",
-    "last_opened_file_path": "/Users/allakashevarova/Documents/GitHub/API_training/src/main/resources/payload",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Task__40&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/allakashevarova/Documents/GitHub/API_training/src/main/resources/payload&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/payload" />
@@ -88,12 +97,15 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.coherent.zipcode" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetUsers.shouldGetUsersWithSex">
-    <configuration name="GetUsers.shouldGetUsersOlderThan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UpdateUser.shouldUpdateUser">
+    <configuration name="GetUser.shouldGetUsersWithGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -102,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
-      <option name="METHOD_NAME" value="shouldGetUsersOlderThan" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUser" />
+      <option name="METHOD_NAME" value="shouldGetUsersWithGET" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.shouldGetUsersWithSex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GetUser.shouldGetUsersWithSex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -118,24 +130,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUser" />
       <option name="METHOD_NAME" value="shouldGetUsersWithSex" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GetUsers.shouldGetUsersYoungerThan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
-      <option name="METHOD_NAME" value="shouldGetUsersYoungerThan" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,7 +153,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PostUsers.shouldCreateUserAndRemoveZip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PostZipCodes.shouldCreateNoDuplicatesForAlreadyUsedZipCodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.PostZipCodes" />
+      <option name="METHOD_NAME" value="shouldCreateNoDuplicatesForAlreadyUsedZipCodes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpdateUser.shouldUpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -166,8 +178,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.PostUsers" />
-      <option name="METHOD_NAME" value="shouldCreateUserAndRemoveZip" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="METHOD_NAME" value="shouldUpdateUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetUsers.shouldGetUsersWithSex" />
-        <item itemvalue="JUnit.GetUsers.shouldGetUsersYoungerThan" />
-        <item itemvalue="JUnit.GetUsers.shouldGetUsersOlderThan" />
-        <item itemvalue="JUnit.PostUsers.shouldCreateUserAndRemoveZip" />
+        <item itemvalue="JUnit.UpdateUser.shouldUpdateUser" />
         <item itemvalue="JUnit.GetZipCodes.shouldGetZipCodeWithGET" />
+        <item itemvalue="JUnit.PostZipCodes.shouldCreateNoDuplicatesForAlreadyUsedZipCodes" />
+        <item itemvalue="JUnit.GetUser.shouldGetUsersWithGET" />
+        <item itemvalue="JUnit.GetUser.shouldGetUsersWithSex" />
       </list>
     </recent_temporary>
   </component>
@@ -203,11 +215,6 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -234,6 +241,11 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
@@ -243,7 +255,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com.coherent/User.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/coherent/user/User.java</url>
           <line>27</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
