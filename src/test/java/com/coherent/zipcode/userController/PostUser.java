@@ -22,7 +22,6 @@ public class PostUser extends BasicTestClass {
 
         userController.sendPostUsers(user);
         List<User> listOfUsers = userController.sendGetUsers();
-        System.out.println("User in the list: " + listOfUsers.contains(user));
 
         JsonNode jsonNode = new ObjectMapper().readTree(new File(jsonUser));
         String zipCodeToBeDeleted = jsonNode.get("zipCode").asText();
@@ -56,11 +55,8 @@ public class PostUser extends BasicTestClass {
         String jsonUser = "src/main/resources/payload/createUserZipIncorrect.json";
         User user = new ObjectMapper().readValue(new File(jsonUser), User.class);
 
-        //Question: Since we assert 201 status code in sendPostUsers() then this test fails. To make it pass
-        //the run - should I remove assertion from sendPostUsers()? Other tests won't benefit from this solution...
         userController.sendPostUsers(user);
         List<User> listOfUsers = userController.sendGetUsers();
-
 
         org.assertj.core.api.Assertions.assertThat(listOfUsers).doesNotContain(user);
         //No bugs

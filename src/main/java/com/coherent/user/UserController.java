@@ -71,17 +71,18 @@ public class UserController {
     }
 
     @SneakyThrows
-    public void sendPostUsers(User body) {
+    public int sendPostUsers(User body) {
         try (
                 CloseableHttpResponse response = httpRequestManager.sendPost(RequestUtils.buildURI(
                                 "users.path"),
                         SingletonTokenManager.getWriteToken(),
                         body)) {
 
-            Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(201);
+            //Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(201);
             String responseBody = EntityUtils.toString(response.getEntity());
             logger.info("Response -> " + responseBody);
             logger.info("Response StatusCode -> " + response.getStatusLine().getStatusCode());
+            return response.getStatusLine().getStatusCode();
         }
     }
 

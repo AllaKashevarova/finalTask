@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userRequiredFieldsMissed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userWrongZip.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RandomUitls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userUpdated.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userNewValues.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userNewValues.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userNewValues.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userRequiredFieldsMissed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userRequiredFieldsMissed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userWrongZip.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userWrongZip.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" afterDir="false" />
     </list>
@@ -85,6 +91,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/updateUser" />
+      <recent name="$PROJECT_DIR$/src/main/resources/updateUserWithPUT" />
       <recent name="$PROJECT_DIR$/src/main/resources/payload" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,35 +105,18 @@
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UpdateUser.shouldNotUpdateUserIfRequiredFieldsMissed">
-    <configuration name="GetZipCodes.shouldGetZipCodeWithGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UpdateUser">
+    <configuration name="UpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.GetZipCodes" />
-      <option name="METHOD_NAME" value="shouldGetZipCodeWithGET" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostZipCodes.shouldCreateNoDuplicatesForAlreadyUsedZipCodes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.PostZipCodes" />
-      <option name="METHOD_NAME" value="shouldCreateNoDuplicatesForAlreadyUsedZipCodes" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -163,7 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpdateUser.shouldUpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUser.shouldNotUpdateUserWithPUTIfRequiredFieldsMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -173,7 +163,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
       <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
-      <option name="METHOD_NAME" value="shouldUpdateUser" />
+      <option name="METHOD_NAME" value="shouldNotUpdateUserWithPUTIfRequiredFieldsMissed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpdateUser.shouldNotUpdateUserWithPUTIfZipIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="METHOD_NAME" value="shouldNotUpdateUserWithPUTIfZipIncorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UpdateUser" />
+        <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserWithPUTIfRequiredFieldsMissed" />
         <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserIfRequiredFieldsMissed" />
-        <item itemvalue="JUnit.PostZipCodes.shouldCreateNoDuplicatesForAlreadyUsedZipCodes" />
+        <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserWithPUTIfZipIncorrect" />
         <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserIfInvalidZip" />
-        <item itemvalue="JUnit.UpdateUser.shouldUpdateUser" />
-        <item itemvalue="JUnit.GetZipCodes.shouldGetZipCodeWithGET" />
       </list>
     </recent_temporary>
   </component>
