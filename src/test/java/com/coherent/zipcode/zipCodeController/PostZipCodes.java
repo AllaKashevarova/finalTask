@@ -41,7 +41,7 @@ public class PostZipCodes extends BasicTestClass {
     @DisplayName("Scenario 4 - check there are no duplicates for already used zipcodes")
     @Test
     public void shouldCreateNoDuplicatesForAlreadyUsedZipCodes() throws IOException {
-        List<String> requestBody = new ArrayList<>(Arrays.asList("TEST1", "TEST2"));
+        List<String> requestBody = new ArrayList<>(Arrays.asList("TEST15", "TEST16", "TEST17", "TEST18"));
         zipCodeController.sendPostZipCodes(requestBody, 201);
         List<String> getZipCodesList = zipCodeController.sendGetZipCodes(201);
         long count = getZipCodesList.stream().filter(element -> element.equals("TEST1")).count();

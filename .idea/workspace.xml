@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RandomUitls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userUpdated.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/HttpRequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.coherent/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.coherent/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/payload/createUserAllFields.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/GetUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userNewValues.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userRequiredFieldsMissed.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userRequiredFieldsMissed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/updateUser/userWrongZip.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/updateUser/userWrongZip.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/PostUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/zipCodeController/PostZipCodes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Task__40",
-    "last_opened_file_path": "/Users/allakashevarova/Documents/GitHub/API_training/src/main/resources/payload",
+    "last_opened_file_path": "/Users/alakashavarava/Documents/GitHub/API_training/src/main/resources/updateUser",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -82,18 +90,23 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/updateUser" />
+      <recent name="$PROJECT_DIR$/src/main/resources/updateUserWithPUT" />
       <recent name="$PROJECT_DIR$/src/main/resources/payload" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.coherent.zipcode" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GetUsers.shouldGetUsersWithSex">
-    <configuration name="GetUsers.shouldGetUsersOlderThan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UpdateUser">
+    <configuration name="UpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -102,14 +115,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
-      <option name="METHOD_NAME" value="shouldGetUsersOlderThan" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.shouldGetUsersWithSex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUser.shouldNotUpdateUserIfInvalidZip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -118,14 +130,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
-      <option name="METHOD_NAME" value="shouldGetUsersWithSex" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="METHOD_NAME" value="shouldNotUpdateUserIfInvalidZip" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetUsers.shouldGetUsersYoungerThan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUser.shouldNotUpdateUserIfRequiredFieldsMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -134,30 +146,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.GetUsers" />
-      <option name="METHOD_NAME" value="shouldGetUsersYoungerThan" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="METHOD_NAME" value="shouldNotUpdateUserIfRequiredFieldsMissed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetZipCodes.shouldGetZipCodeWithGET" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.zipCodeController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.zipCodeController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.zipCodeController.GetZipCodes" />
-      <option name="METHOD_NAME" value="shouldGetZipCodeWithGET" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostUsers.shouldCreateUserAndRemoveZip" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UpdateUser.shouldNotUpdateUserWithPUTIfRequiredFieldsMissed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -166,8 +162,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.PostUsers" />
-      <option name="METHOD_NAME" value="shouldCreateUserAndRemoveZip" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="METHOD_NAME" value="shouldNotUpdateUserWithPUTIfRequiredFieldsMissed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UpdateUser.shouldNotUpdateUserWithPUTIfZipIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="METHOD_NAME" value="shouldNotUpdateUserWithPUTIfZipIncorrect" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -175,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetUsers.shouldGetUsersWithSex" />
-        <item itemvalue="JUnit.GetUsers.shouldGetUsersYoungerThan" />
-        <item itemvalue="JUnit.GetUsers.shouldGetUsersOlderThan" />
-        <item itemvalue="JUnit.PostUsers.shouldCreateUserAndRemoveZip" />
-        <item itemvalue="JUnit.GetZipCodes.shouldGetZipCodeWithGET" />
+        <item itemvalue="JUnit.UpdateUser" />
+        <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserWithPUTIfRequiredFieldsMissed" />
+        <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserIfRequiredFieldsMissed" />
+        <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserWithPUTIfZipIncorrect" />
+        <item itemvalue="JUnit.UpdateUser.shouldNotUpdateUserIfInvalidZip" />
       </list>
     </recent_temporary>
   </component>
@@ -203,11 +215,6 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -234,6 +241,11 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
@@ -243,7 +255,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com.coherent/User.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/coherent/user/User.java</url>
           <line>27</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>

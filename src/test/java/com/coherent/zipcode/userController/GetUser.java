@@ -1,19 +1,16 @@
 package com.coherent.zipcode.userController;
 
-import com.coherent.User;
+import com.coherent.user.User;
 import com.coherent.zipcode.BasicTestClass;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.util.*;
 
-public class GetUsers extends BasicTestClass {
+public class GetUser extends BasicTestClass {
     @DisplayName("Scenario 1 - Get all users stored in the application for now")
     @Test
     public void shouldGetUsersWithGET() {

@@ -1,4 +1,4 @@
-package com.coherent;
+package com.coherent.user;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Data;

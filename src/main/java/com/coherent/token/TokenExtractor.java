@@ -1,6 +1,5 @@
 package com.coherent.token;
 
-import com.coherent.HttpRequestManager;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.client.methods.CloseableHttpResponse;

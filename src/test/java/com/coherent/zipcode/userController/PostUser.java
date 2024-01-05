@@ -1,22 +1,18 @@
 package com.coherent.zipcode.userController;
 
-import com.coherent.User;
+import com.coherent.user.User;
 import com.coherent.zipcode.BasicTestClass;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.assertj.core.api.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class PostUsers extends BasicTestClass {
+public class PostUser extends BasicTestClass {
 
     @DisplayName("Scenario 1 - check user is added and zip code is removed")
     @Test
@@ -26,7 +22,6 @@ public class PostUsers extends BasicTestClass {
 
         userController.sendPostUsers(user);
         List<User> listOfUsers = userController.sendGetUsers();
-        System.out.println("User in the list: " + listOfUsers.contains(user));
 
         JsonNode jsonNode = new ObjectMapper().readTree(new File(jsonUser));
         String zipCodeToBeDeleted = jsonNode.get("zipCode").asText();
@@ -60,11 +55,8 @@ public class PostUsers extends BasicTestClass {
         String jsonUser = "src/main/resources/payload/createUserZipIncorrect.json";
         User user = new ObjectMapper().readValue(new File(jsonUser), User.class);
 
-        //Question: Since we assert 201 status code in sendPostUsers() then this test fails. To make it pass
-        //the run - should I remove assertion from sendPostUsers()? Other tests won't benefit from this solution...
         userController.sendPostUsers(user);
         List<User> listOfUsers = userController.sendGetUsers();
-
 
         org.assertj.core.api.Assertions.assertThat(listOfUsers).doesNotContain(user);
         //No bugs
