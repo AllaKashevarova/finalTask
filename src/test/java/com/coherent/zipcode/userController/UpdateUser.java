@@ -3,7 +3,6 @@ package com.coherent.zipcode.userController;
 import com.coherent.user.PatchRequestBody;
 import com.coherent.user.User;
 import com.coherent.zipcode.BasicTestClass;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.assertj.core.api.Assertions;
@@ -34,7 +33,7 @@ public class UpdateUser extends BasicTestClass {
     public void beforeEach() {
         oldZip = randomUitls.randomZip();
         newZip = randomUitls.randomZip();
-        randomUitls.sendGetWithRandomZipCodes(oldZip, newZip);
+        randomUitls.sendPostWithRandomZipCodes(oldZip, newZip);
         name = faker.name().firstName();
 
         oldJsonUser = "src/main/resources/updateUser/user.json";

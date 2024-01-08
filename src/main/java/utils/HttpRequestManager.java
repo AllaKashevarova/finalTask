@@ -1,13 +1,11 @@
 package utils;
 
+import com.coherent.user.HttpDeleteWithBody;
 import com.coherent.user.PatchRequestBody;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import org.apache.http.HttpHeaders;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPatch;
-import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.*;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -69,5 +67,27 @@ public class HttpRequestManager {
         logger.info("Authorization token: {}", bearerToken);
 
         return client.execute(httpPatch);
+    }
+
+    @SneakyThrows
+    public CloseableHttpResponse sendDelete(URI uri, String bearerToken, Object bodyToDelete){
+        CloseableHttpClient client = HttpClients.createDefault();
+
+        HttpDeleteWithBody httpDeleteWithBody = new HttpDeleteWithBody(uri);
+
+        String jsonBody = objectMapper.writeValueAsString(bodyToDelete);
+        StringEntity entity = new StringEntity(jsonBody);
+
+        httpDeleteWithBody.setEntity(entity);
+        httpDeleteWithBody.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + bearerToken);
+        httpDeleteWithBody.setHeader("Accept", "application/json");
+        httpDeleteWithBody.setHeader("Content-type", "application/json");
+
+        logger.info("Sending DELETE request to URI: {}", uri);
+        logger.info("Request body: {}", jsonBody);
+        logger.info("Authorization token: {}", bearerToken);
+
+        return client.execute(httpDeleteWithBody);
+
     }
 }

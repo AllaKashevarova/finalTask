@@ -36,7 +36,7 @@ public class UserController {
             objectMapper = new ObjectMapper();
             responseBody = EntityUtils.toString(response.getEntity());
 
-            logger.debug("Response -> {}", responseBody);
+            logger.debug("GET Response -> {}", responseBody);
         }
 
         List<User> usersList = objectMapper.readValue(responseBody, new TypeReference<List<User>>() {
@@ -61,7 +61,8 @@ public class UserController {
             objectMapper = new ObjectMapper();
             responseBody = EntityUtils.toString(response.getEntity());
 
-            logger.debug("Response -> {}", responseBody);
+            logger.debug("GET Response -> {}", responseBody);
+            logger.info("GET Response StatusCode -> " + response.getStatusLine().getStatusCode());
         }
 
         List<User> usersList = objectMapper.readValue(responseBody, new TypeReference<List<User>>() {
@@ -80,25 +81,34 @@ public class UserController {
 
             //Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(201);
             String responseBody = EntityUtils.toString(response.getEntity());
-            logger.info("Response -> " + responseBody);
-            logger.info("Response StatusCode -> " + response.getStatusLine().getStatusCode());
+            logger.info("POST Response -> " + responseBody);
+            logger.info("POST Response StatusCode -> " + response.getStatusLine().getStatusCode());
             return response.getStatusLine().getStatusCode();
         }
     }
 
     @SneakyThrows
-    public int sendPatchUsers(PatchRequestBody patchRequestBody){
+    public int sendPatchUsers(PatchRequestBody patchRequestBody) {
         try (
                 CloseableHttpResponse response = httpRequestManager.sendPatch(RequestUtils.buildURI(
                                 "users.path"),
                         SingletonTokenManager.getWriteToken(),
                         patchRequestBody)) {
 
-            //Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(200);
             String responseBody = EntityUtils.toString(response.getEntity());
             logger.info("PATCH Response -> " + responseBody);
             logger.info("PATCH Response StatusCode -> " + response.getStatusLine().getStatusCode());
-            logger.info("PATCH Response StatusLine -> " + response.getStatusLine());
+            return response.getStatusLine().getStatusCode();
+        }
+    }
+
+    @SneakyThrows
+    public int sendDeleteUsers(User body) {
+        try (
+                CloseableHttpResponse response = httpRequestManager.sendDelete(RequestUtils.buildURI("users.path"),
+                        SingletonTokenManager.getWriteToken(),
+                        body)) {
+            logger.info("DELETE Response StatusCode -> " + response.getStatusLine().getStatusCode());
             return response.getStatusLine().getStatusCode();
         }
     }
