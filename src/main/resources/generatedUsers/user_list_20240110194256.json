@@ -1,0 +1,26 @@
+[ {
+  "age" : 13,
+  "name" : "Brianne",
+  "sex" : "MALE",
+  "zipCode" : "227515"
+}, {
+  "age" : 59,
+  "name" : "Oscar",
+  "sex" : "FEMALE",
+  "zipCode" : "168164"
+}, {
+  "age" : 65,
+  "name" : "Stephani",
+  "sex" : "MALE",
+  "zipCode" : "535275"
+}, {
+  "age" : 40,
+  "name" : "Trevor",
+  "sex" : "MALE",
+  "zipCode" : "510246"
+}, {
+  "age" : 16,
+  "name" : "Lashay",
+  "sex" : "FEMALE",
+  "zipCode" : "652748"
+} ]

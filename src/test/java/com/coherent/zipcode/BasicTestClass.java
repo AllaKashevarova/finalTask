@@ -18,6 +18,7 @@ public abstract class BasicTestClass {
     protected Faker faker = new Faker();
 
 
+
     @AfterEach
     public void afterAll() {
         try {

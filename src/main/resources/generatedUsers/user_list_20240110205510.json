@@ -1,0 +1,36 @@
+[ {
+  "age" : 28,
+  "name" : "Crista",
+  "sex" : "FEMALE",
+  "zipCode" : "972263"
+}, {
+  "age" : 43,
+  "name" : "Meghann",
+  "sex" : "FEMALE",
+  "zipCode" : "013766"
+}, {
+  "age" : 37,
+  "name" : "Corene",
+  "sex" : "FEMALE",
+  "zipCode" : "554158"
+}, {
+  "age" : 58,
+  "name" : "Floyd",
+  "sex" : "FEMALE",
+  "zipCode" : "847837"
+}, {
+  "age" : 16,
+  "name" : "Steffanie",
+  "sex" : "MALE",
+  "zipCode" : "763648"
+}, {
+  "age" : 15,
+  "name" : "Elfrieda",
+  "sex" : "FEMALE",
+  "zipCode" : "805147"
+}, {
+  "age" : 71,
+  "name" : "Nicolette",
+  "sex" : "MALE",
+  "zipCode" : "524392"
+} ]

@@ -4,14 +4,20 @@ import com.coherent.user.HttpDeleteWithBody;
 import com.coherent.user.PatchRequestBody;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpHeaders;
 import org.apache.http.client.methods.*;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 
@@ -89,5 +95,23 @@ public class HttpRequestManager {
 
         return client.execute(httpDeleteWithBody);
 
+    }
+
+    @SneakyThrows(IOException.class)
+    public CloseableHttpResponse sendPostUpload(URI uri, String bearerToken, File file){
+        CloseableHttpClient client = HttpClients.createDefault();
+        HttpPost httpPost = new HttpPost(uri);
+
+        MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+        builder.setContentType(ContentType.MULTIPART_FORM_DATA);
+
+        builder.addBinaryBody("file", file, ContentType.DEFAULT_BINARY, file.getName());
+        HttpEntity entity = builder.build();
+        httpPost.setEntity(entity);
+        httpPost.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + bearerToken);
+
+        logger.info("Sending POST with Upload request to URI: {}", uri);
+        logger.info("POST with Upload Authorization token: {}", bearerToken);
+        return client.execute(httpPost);
     }
 }
