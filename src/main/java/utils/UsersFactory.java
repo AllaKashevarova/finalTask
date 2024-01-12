@@ -1,9 +1,7 @@
 package utils;
 
 import com.coherent.user.User;
-import com.coherent.user.UserController;
 import com.coherent.zipcode.ZipCodeController;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.github.javafaker.Faker;
@@ -15,10 +13,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
 
-public class GenerateUsersToJson {
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(GenerateUsersToJson.class);
+public class UsersFactory {
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(UsersFactory.class);
 
     public List<User> generateUserList(int count) {
         ZipCodeController zipCodeController = new ZipCodeController();
@@ -57,5 +54,19 @@ public class GenerateUsersToJson {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void deleteFilesInResourcesDirectory() {
+        File resourcesDirectory = new File("src/main/resources/generatedUsers");
+
+        if (resourcesDirectory.exists() && resourcesDirectory.isDirectory()) {
+            File[] files = resourcesDirectory.listFiles();
+
+            if (files != null) {
+                for (File file : files) {
+                    file.delete();
+                }
+            }
+        }
     }
 }

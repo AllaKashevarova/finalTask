@@ -115,7 +115,7 @@ public class UserController {
     }
 
     @SneakyThrows
-    public String sendPostUsersWithUpload(File file) {
+    public String sendPostUsersWithUpload(File file, int statusCode) {
         String responseBody;
         try (
                 CloseableHttpResponse response = httpRequestManager.sendPostUpload(RequestUtils.buildURI(
@@ -123,10 +123,10 @@ public class UserController {
                         SingletonTokenManager.getWriteToken(),
                         file)) {
 
-            Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(201);
+            Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(statusCode);
             responseBody = EntityUtils.toString(response.getEntity());
 
-            logger.debug("POST WIT UPLOAD Response -> {}", responseBody);
+            logger.debug("POST WITH UPLOAD Response -> {}", responseBody);
         }
         return responseBody;
     }

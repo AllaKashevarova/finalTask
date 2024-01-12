@@ -5,13 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/GenerateUsersToJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HttpRequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/BasicTestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GenerateUsersToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UsersFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/generated_data_20240109220746.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172024.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172551.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172651.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172711.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172910.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110173546.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110173912.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110174635.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110174735.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175044.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175106.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175254.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175325.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110193638.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110193648.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194202.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194210.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194256.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194925.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110195012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110195021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110200140.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110200456.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110201242.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110202823.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110202918.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110203521.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110203529.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205306.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205454.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205510.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205527.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205612.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110210211.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110210346.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160734.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160746.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160839.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160859.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160930.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161249.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161542.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161914.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161948.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111162019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111162034.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,9 +224,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UploadUser" />
-        <item itemvalue="JUnit.UploadUser.sendPOSTWithUploadFailsIfMissedRequiredField" />
         <item itemvalue="JUnit.UploadUser.sendPOSTWithUploadFailsIfIncorrectZipCode" />
         <item itemvalue="JUnit.UploadUser.sendPOSTWithUpload" />
+        <item itemvalue="JUnit.UploadUser.sendPOSTWithUploadFailsIfMissedRequiredField" />
         <item itemvalue="JUnit.DeleteUser" />
       </list>
     </recent_temporary>
@@ -253,12 +297,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java</url>
-          <line>24</line>
+          <line>29</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java</url>
-          <line>37</line>
+          <line>40</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>

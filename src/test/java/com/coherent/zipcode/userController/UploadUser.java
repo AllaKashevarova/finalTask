@@ -2,27 +2,32 @@ package com.coherent.zipcode.userController;
 
 import com.coherent.user.User;
 import com.coherent.zipcode.BasicTestClass;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.SneakyThrows;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import utils.GenerateUsersToJson;
+import utils.UsersFactory;
 
 import java.io.File;
 import java.util.List;
 
 public class UploadUser extends BasicTestClass {
-    private GenerateUsersToJson userGenerator = new GenerateUsersToJson();
+    private UsersFactory userFactory = new UsersFactory();
+    private int expectedNumberOfUsers = 5;
+
+    @BeforeEach
+    public void cleanUpUserFiles(){
+        userFactory.deleteFilesInResourcesDirectory();
+    }
 
 
     @DisplayName("Scenario 1 - All users are replaced with users from file And Response contains number of uploaded users")
     @Test
     public void sendPOSTWithUpload(){
-        int expectedNumberOfUsers = 5;
-        List<User> userList = userGenerator.generateUserList(expectedNumberOfUsers);
-        File usersFile = userGenerator.saveToJson(userList);
-        String responseUsers = userController.sendPostUsersWithUpload(usersFile);
+        List<User> userList = userFactory.generateUserList(expectedNumberOfUsers);
+        File usersFile = userFactory.saveToJson(userList);
+
+        String responseUsers = userController.sendPostUsersWithUpload(usersFile, 201);
 
         Assertions.assertThat(responseUsers).isEqualTo("Number of users = " + expectedNumberOfUsers);
     }
@@ -31,10 +36,12 @@ public class UploadUser extends BasicTestClass {
     @Test
     public void sendPOSTWithUploadFailsIfIncorrectZipCode(){
         User dummyUser  = new User(30, "Anna", "FEMALE","00000");
-        List<User> userList = userGenerator.generateUserList(5);
+        List<User> userList = userFactory.generateUserList(expectedNumberOfUsers);
         userList.add(dummyUser);
-        File usersFile = userGenerator.saveToJson(userList);
-        userController.sendPostUsersWithUpload(usersFile);
+        File usersFile = userFactory.saveToJson(userList);
+        String responseUsers = userController.sendPostUsersWithUpload(usersFile, 500);
+
+        Assertions.assertThat(responseUsers).isNotEqualTo("Number of users = " + expectedNumberOfUsers);
 
         //BUG
         //Getting 500 error instead of 424
@@ -46,10 +53,12 @@ public class UploadUser extends BasicTestClass {
     @Test
     public void sendPOSTWithUploadFailsIfMissedRequiredField(){
         User dummyUser  = new User(39, null, "FEMALE","123456");
-        List<User> userList = userGenerator.generateUserList(5);
+        List<User> userList = userFactory.generateUserList(expectedNumberOfUsers);
         userList.add(dummyUser);
-        File usersFile = userGenerator.saveToJson(userList);
-        userController.sendPostUsersWithUpload(usersFile);
+        File usersFile = userFactory.saveToJson(userList);
+        String responseUsers = userController.sendPostUsersWithUpload(usersFile, 409);
+
+        Assertions.assertThat(responseUsers).isNotEqualTo("Number of users = " + expectedNumberOfUsers);
 
         //BUG
         //Getting 500 error instead of 409
