@@ -39,7 +39,7 @@ public class UploadUser extends BasicTestClass {
         List<User> userList = userFactory.generateUserList(expectedNumberOfUsers);
         userList.add(dummyUser);
         File usersFile = userFactory.saveToJson(userList);
-        String responseUsers = userController.sendPostUsersWithUpload(usersFile, 500);
+        String responseUsers = userController.sendPostUsersWithUpload(usersFile, 424);
 
         Assertions.assertThat(responseUsers).isNotEqualTo("Number of users = " + expectedNumberOfUsers);
 
