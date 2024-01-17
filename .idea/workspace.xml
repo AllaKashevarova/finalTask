@@ -5,13 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d3f9a4-3059-4408-98e3-143a158762f2" name="Changes" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/HttpDeleteWithBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/DeleteUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coherent/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/HttpRequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/HttpRequestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RandomUitls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RandomUitls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UpdateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/GenerateUsersToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/UsersFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/generated_data_20240109220746.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172024.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172551.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172651.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172711.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110172910.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110173546.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110173912.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110174635.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110174735.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175044.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175106.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175254.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list20240110175325.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110193638.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110193648.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194202.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194210.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194256.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110194925.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110195012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110195021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110200140.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110200456.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110201242.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110202823.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110202918.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110203521.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110203529.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205306.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205454.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205510.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205527.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110205612.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110210211.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240110210346.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160734.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160746.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160839.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160859.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111160930.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161249.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161542.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161914.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111161948.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111162019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatedUsers/user_list_20240111162034.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,22 +114,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Task__60&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alakashavarava/Documents/GitHub/API_training/src/main/resources/updateUser&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Task__60",
+    "last_opened_file_path": "/Users/alakashavarava/Documents/GitHub/API_training/src/main/resources/payload",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/payload" />
       <recent name="$PROJECT_DIR$/src/main/resources/updateUser" />
       <recent name="$PROJECT_DIR$/src/main/resources/updateUserWithPUT" />
-      <recent name="$PROJECT_DIR$/src/main/resources/payload" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -98,7 +142,7 @@
       <recent name="com.coherent.zipcode.zipCodeController" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeleteUser">
+  <component name="RunManager" selected="JUnit.UploadUser">
     <configuration name="DeleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
@@ -114,7 +158,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteUser.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UploadUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="API_training" />
       <extension name="coverage">
         <pattern>
@@ -123,67 +167,67 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.DeleteUser" />
-      <option name="METHOD_NAME" value="deleteUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteUser.deleteUserRequiredFieldMissing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.DeleteUser" />
-      <option name="METHOD_NAME" value="deleteUserRequiredFieldMissing" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeleteUser.deleteUserWithRequiredFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.DeleteUser" />
-      <option name="METHOD_NAME" value="deleteUserWithRequiredFields" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="API_training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
-      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UpdateUser" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UploadUser" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadUser.sendPOSTWithUpload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UploadUser" />
+      <option name="METHOD_NAME" value="sendPOSTWithUpload" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadUser.sendPOSTWithUploadFailsIfIncorrectZipCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UploadUser" />
+      <option name="METHOD_NAME" value="sendPOSTWithUploadFailsIfIncorrectZipCode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UploadUser.sendPOSTWithUploadFailsIfMissedRequiredField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="API_training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.coherent.zipcode.userController.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.coherent.zipcode.userController" />
+      <option name="MAIN_CLASS_NAME" value="com.coherent.zipcode.userController.UploadUser" />
+      <option name="METHOD_NAME" value="sendPOSTWithUploadFailsIfMissedRequiredField" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UploadUser" />
+        <item itemvalue="JUnit.UploadUser.sendPOSTWithUploadFailsIfIncorrectZipCode" />
+        <item itemvalue="JUnit.UploadUser.sendPOSTWithUpload" />
+        <item itemvalue="JUnit.UploadUser.sendPOSTWithUploadFailsIfMissedRequiredField" />
         <item itemvalue="JUnit.DeleteUser" />
-        <item itemvalue="JUnit.DeleteUser.deleteUserRequiredFieldMissing" />
-        <item itemvalue="JUnit.DeleteUser.deleteUserWithRequiredFields" />
-        <item itemvalue="JUnit.DeleteUser.deleteUser" />
-        <item itemvalue="JUnit.UpdateUser" />
       </list>
     </recent_temporary>
   </component>
@@ -207,11 +251,6 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="OPEN_GENERIC_TABS">
-      <map>
-        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
-      </map>
-    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -238,6 +277,11 @@
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="eebc0431-f735-40cb-aee8-89f709dec36d" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
@@ -250,6 +294,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/coherent/user/User.java</url>
           <line>27</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/coherent/zipcode/userController/UploadUser.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

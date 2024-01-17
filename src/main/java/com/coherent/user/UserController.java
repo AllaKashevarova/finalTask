@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.RequestUtils;
 
+import java.io.File;
 import java.net.URI;
 import java.util.*;
 
@@ -112,4 +113,22 @@ public class UserController {
             return response.getStatusLine().getStatusCode();
         }
     }
+
+    @SneakyThrows
+    public String sendPostUsersWithUpload(File file, int statusCode) {
+        String responseBody;
+        try (
+                CloseableHttpResponse response = httpRequestManager.sendPostUpload(RequestUtils.buildURI(
+                                "users.upload.path"),
+                        SingletonTokenManager.getWriteToken(),
+                        file)) {
+
+            Assertions.assertThat(response.getStatusLine().getStatusCode()).isEqualTo(statusCode);
+            responseBody = EntityUtils.toString(response.getEntity());
+
+            logger.debug("POST WITH UPLOAD Response -> {}", responseBody);
+        }
+        return responseBody;
+    }
 }
+
