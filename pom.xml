@@ -16,6 +16,8 @@
         <aspectj.version>1.9.20.1</aspectj.version>
     </properties>
 
+     <pluginManagement>
+      <plugins>     
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -26,6 +28,8 @@
             </argLine>
         </configuration>
     </plugin>
+ </plugins>
+    </pluginManagement>
 
     <dependencyManagement>
         <dependencies>
