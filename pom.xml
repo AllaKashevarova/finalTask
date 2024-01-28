@@ -15,8 +15,7 @@
         <allure.version>2.24.0</allure.version>
         <aspectj.version>1.9.20.1</aspectj.version>
     </properties>
-
-     <pluginManagement>
+   
       <plugins>     
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -29,7 +28,6 @@
         </configuration>
     </plugin>
  </plugins>
-    </pluginManagement>
 
     <dependencyManagement>
         <dependencies>
